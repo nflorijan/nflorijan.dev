@@ -1,18 +1,50 @@
 <template>
-  <div>
-    This is my header
-  </div>
+  <header>
+    <h2>{{ generalSettings.title }}</h2>
+    <nav>
+      <ul>
+        <li>
+          <NuxtLink
+            to="/"
+          >
+            Home
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink
+            to="/about"
+          >
+            About
+          </NuxtLink>
+        </li>
+        <li>
+          <NuxtLink
+            to="/blog"
+          >
+            Blog
+          </NuxtLink>
+        </li>
+      </ul>
+    </nav>
+  </header>
 </template>
+<script>
+import gqlQuery from 'graphql-tag'
 
-<style>
-.NuxtLogo {
-  animation: 1s appear;
-  margin: auto;
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
+export default {
+  data () {
+    return {
+      generalSettings: ''
+    }
+  },
+  apollo: {
+    // Simple query that will update the 'hello' vue property
+    generalSettings: gqlQuery`query {
+      generalSettings {
+        title
+      }
+    }
+    `
   }
 }
-</style>
+</script>
