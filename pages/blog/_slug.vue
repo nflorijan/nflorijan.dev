@@ -1,6 +1,7 @@
 <template>
   <div>
     {{ postBy.title }}
+    <!-- eslint-disable-next-line vue/no-v-html -->
     <div v-html="postBy.content" />
   </div>
 </template>

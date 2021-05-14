@@ -6,18 +6,11 @@
     >
       Loading posts...
     </div>
-    <div
+    <BlogExcerpt
       v-for="post in posts.nodes"
       :key="post.id"
-    >
-      <h3>{{ post.title }}</h3>
-      <p v-html="post.excerpt" />
-      <nuxt-link
-        :to="{ name: 'blog-slug', params: { slug: post.slug }}"
-      >
-        Read more
-      </nuxt-link>
-    </div>
+      :post="post"
+    />
   </div>
 </template>
 <script>
