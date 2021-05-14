@@ -1,0 +1,56 @@
+/* Fonts */
+
+$nf-font-stack: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+$nf-font-size-body: 16px;
+
+/* Colors */
+
+$nf-color-white: #ffffff;
+$nf-color-black: #000000;
+$nf-color-black-01: #0f0e15;
+$nf-color-transparent: rgba(0, 0, 0, 0);
+
+/* Radius */
+
+$nf-radius-round: 50%;
+$nf-radius-pill: 100px;
+$nf-radius: 8px;
+$nf-radius-sm: 4px;
+
+/* Screens */
+
+$nf-screen-full-hd: 120rem; // 1920px
+$nf-screen-desktop-xxl: 112.5rem; //1800px
+$nf-screen-desktop-xl: 100rem; //1600px
+$nf-screen-desktop-md: 90rem; // 1440px
+$nf-screen-desktop-sm: 78.125rem; // 1250px
+$nf-screen-tablet-landscape: 64rem; // 1024px
+$nf-screen-tablet: 62rem; //992px
+$nf-screen-tablet-portrait: 48rem; // 768px
+$nf-screen-mobile-landscape: 46.25rem; // 740px
+$nf-screen-mobile-sm-landscape: 36rem; // 576px
+$nf-screen-mobile-md-portrait: 30rem; // 480px
+$nf-screen-mobile-portrait: 23.4375rem; // 375px
+$nf-screen-mobile-sm-portrait: 20rem; // 320px
+
+/* Z indexes */
+
+$nf-z-index-header: 1;
+$nf-z-index-modal: 10;
+
+/* Shadows */
+$nf-shadow-sm: 0px 0px 5px rgba(0, 0, 0, 0.3);
+$nf-shadow-md: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+/* Transitions */
+
+$nf-transition: all 0.3s ease;
+
+/* CSS Variables */
+
+//:root {
+//
+//}

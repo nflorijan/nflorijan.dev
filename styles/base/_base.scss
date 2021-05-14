@@ -1,0 +1,71 @@
+/**
+ * Base styles
+ *
+ */
+
+ *,
+ *:before,
+ *:after {
+   box-sizing: border-box;
+ }
+
+ html,
+ body {
+   color: $nf-color-white;
+   font-family: $nf-font-stack;
+   font-size: $nf-font-size-body;
+   overflow-x: hidden;
+   overflow-y: auto;
+   scroll-behavior: smooth;
+   -webkit-text-size-adjust: none;
+ }
+
+ html,
+ body,
+ main {
+   display: flex;
+   flex-direction: column;
+ }
+
+ body,
+ main {
+   flex: 1 1 auto;
+ }
+
+ html {
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   background-color: $nf-color-black-01;
+   min-height: 100%;
+ }
+
+ body {
+   overflow-y: auto;
+   line-height: 1.5;
+   background-color: $nf-color-black-01;
+ }
+
+ button {
+   color: $nf-color-white;
+   cursor: pointer;
+   outline: none;
+ }
+
+ a {
+   color: $nf-color-white;
+   cursor: pointer;
+ }
+
+ input {
+   font-family: $nf-font-stack;
+ }
+
+ svg {
+   fill: currentColor;
+ }
+
+ input[type='number']::-webkit-outer-spin-button,
+ input[type='number']::-webkit-inner-spin-button {
+   -webkit-appearance: none;
+   margin: 0;
+ }
