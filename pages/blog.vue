@@ -3,11 +3,21 @@
     <Header />
     <h1>This is blog page</h1>
     <div
+      v-if="$apollo.loading"
+    >
+      Loading posts...
+    </div>
+    <div
       v-for="post in posts.nodes"
       :key="post.id"
     >
       <h3>{{ post.title }}</h3>
-      <p>{{ post.excerpt }}</p>
+      <p v-html="post.excerpt" />
+      <nuxt-link
+        :to="{ name: 'blog-slug', params: { slug: post.slug, id: post.postId }}"
+      >
+        Read more
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -26,8 +36,10 @@ export default {
       posts {
         nodes {
           id
-          excerpt(format: RENDERED)
+          excerpt
           title
+          slug
+          postId
         }
       }
     }

@@ -4,25 +4,25 @@
     <nav>
       <ul>
         <li>
-          <NuxtLink
+          <nuxt-link
             to="/"
           >
             Home
-          </NuxtLink>
+          </nuxt-link>
         </li>
         <li>
-          <NuxtLink
+          <nuxt-link
             to="/about"
           >
             About
-          </NuxtLink>
+          </nuxt-link>
         </li>
         <li>
-          <NuxtLink
+          <nuxt-link
             to="/blog"
           >
             Blog
-          </NuxtLink>
+          </nuxt-link>
         </li>
       </ul>
     </nav>
