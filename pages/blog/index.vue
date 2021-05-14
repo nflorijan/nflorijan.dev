@@ -1,6 +1,5 @@
 <template>
   <div>
-    <Header />
     <h1>This is blog page</h1>
     <div
       v-if="$apollo.loading"
@@ -14,7 +13,7 @@
       <h3>{{ post.title }}</h3>
       <p v-html="post.excerpt" />
       <nuxt-link
-        :to="{ name: 'blog-slug', params: { slug: post.slug, id: post.postId }}"
+        :to="{ name: 'blog-slug', params: { slug: post.slug, id: post.id }}"
       >
         Read more
       </nuxt-link>
@@ -31,7 +30,6 @@ export default {
     }
   },
   apollo: {
-    // Simple query that will update the 'hello' vue property
     posts: gqlQuery`query {
       posts {
         nodes {
@@ -39,7 +37,6 @@ export default {
           excerpt
           title
           slug
-          postId
         }
       }
     }
