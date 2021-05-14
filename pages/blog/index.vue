@@ -13,7 +13,7 @@
       <h3>{{ post.title }}</h3>
       <p v-html="post.excerpt" />
       <nuxt-link
-        :to="{ name: 'blog-slug', params: { slug: post.slug, id: post.id }}"
+        :to="{ name: 'blog-slug', params: { slug: post.slug }}"
       >
         Read more
       </nuxt-link>
