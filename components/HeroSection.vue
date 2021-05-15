@@ -1,5 +1,5 @@
 <template>
-  <div class="c-hero-section">
+  <section class="c-hero-section">
     <div class="c-hero-section__conent">
       <h1 class="c-hero-section__title">
         {{ content.heroSection.heroSectionTitle }}
@@ -14,7 +14,7 @@
       :src="content.heroSection.heroSectionImage.sourceUrl"
       :alt="content.heroSection.heroSectionImage.altText"
     >
-  </div>
+  </section>
 </template>
 <script>
 export default {
@@ -42,6 +42,13 @@ export default {
       @include absolute-full;
       background: linear-gradient(180deg,rgba(15, 14, 21, .5) 0, $nf-color-black-01 100%);
     }
+  }
+
+  .c-hero-section__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .c-hero-section__conent {

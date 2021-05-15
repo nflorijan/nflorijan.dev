@@ -19,8 +19,7 @@ import gqlQuery from 'graphql-tag'
 export default {
   data () {
     return {
-      posts: '',
-      homeHero: ''
+      posts: ''
     }
   },
   apollo: {

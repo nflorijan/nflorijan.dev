@@ -1,7 +1,7 @@
 <template>
   <header class="site-header">
     <div class="site-header__wrap">
-      <nuxt-link class="site-header__brand" to="/">
+      <nuxt-link class="site-header__logo" to="/">
         {{ generalSettings.title }}
       </nuxt-link>
       <nav class="site-header__nav">
@@ -29,6 +29,23 @@
           </li>
         </ul>
       </nav>
+      <ul class="site-header__social-nav">
+        <li>
+          fb
+        </li>
+        <li>
+          linked
+        </li>
+        <li>
+          insta
+        </li>
+        <li>
+          github
+        </li>
+        <li>
+          yt
+        </li>
+      </ul>
     </div>
   </header>
 </template>
@@ -61,17 +78,57 @@ export default {
     left: 0;
     width: 100%;
     z-index: 10;
+    padding: 60px 0;
   }
 
   .site-header__wrap {
     @include container;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-header__logo {
+    font-size: 28px;
+    line-height: 1;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: $nf-transition;
+
+    &:hover {
+      color: $nf-color-red-01;
+    }
   }
 
   .site-header__nav {
     ul {
       display: flex;
+    }
+
+    li {
+      margin-left: 20px;
+    }
+
+    a {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: $nf-transition;
+
+      &:hover {
+        color: $nf-color-red-01;
+      }
+    }
+  }
+
+  .site-header__social-nav {
+    display: flex;
+
+    li {
+      margin-left: 5px;
     }
   }
 </style>
