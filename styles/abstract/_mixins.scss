@@ -149,3 +149,10 @@
     outline: none;
   }
 }
+
+@mixin container {
+  max-width: 1340px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}

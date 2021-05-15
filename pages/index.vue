@@ -1,12 +1,41 @@
 <template>
   <div>
-    <h1>This is homepage</h1>
+    <div
+      v-if="$apollo.loading"
+    >
+      Loading posts...
+    </div>
+    <HeroSection v-for="heroSection in pages.nodes" :key="heroSection.id" :content="heroSection" />
   </div>
 </template>
 
 <script>
+import gqlQuery from 'graphql-tag'
 
 export default {
-  name: 'Index'
+  data () {
+    return {
+      pages: ''
+    }
+  },
+  apollo: {
+    pages: gqlQuery`query {
+    pages(where: {title: "Homepage"}) {
+    nodes {
+      id
+      title
+      heroSection {
+        heroSectionTitle
+         hetoSectionText
+          heroSectionImage {
+            altText
+            title
+            sourceUrl
+          }
+      }
+    }
+  }
+  }`
+  }
 }
 </script>

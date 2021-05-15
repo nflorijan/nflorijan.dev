@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nflorijan-dev',
+    title: 'nflorijan.dev',
     htmlAttrs: {
       lang: 'en'
     },
@@ -12,6 +12,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    style: [
+      { cssText: '.async-hide { opacity: 0 !important} ', type: 'text/css' }
     ]
   },
 
@@ -19,6 +22,13 @@ export default {
   css: [
     { src: '~/styles/app.scss', lang: 'scss' }
   ],
+
+  styleResources: {
+    scss: [
+      'styles/abstract/_variables.scss',
+      'styles/abstract/_mixins.scss'
+    ]
+  },
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -42,16 +52,17 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: 'http://nflorijandev.local/graphql',
+        httpEndpoint: 'http://nflorijandev.local/graphql'
       }
     }
   },
 
   // Google fonts
   googleFonts: {
+    display: 'swap',
     families: {
       Inter: {
-        wght: [300, 400, 500, 700]
+        wght: [300, 400, 500, 700, 900]
       }
     }
   },

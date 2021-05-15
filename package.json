@@ -14,7 +14,10 @@
     "@nuxtjs/apollo": "^4.0.1-rc.5",
     "core-js": "^3.9.1",
     "graphql-tag": "^2.12.4",
-    "nuxt": "^2.15.3"
+    "nuxt": "^2.15.3",
+    "nuxt-sass-resources-loader": "^2.0.5",
+    "stylus": "^0.54.8",
+    "stylus-loader": "^6.0.0"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^6.0.0",
