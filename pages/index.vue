@@ -1,10 +1,5 @@
 <template>
   <div>
-    <div
-      v-if="$apollo.loading"
-    >
-      Loading Hero Section...
-    </div>
     <HeroSection v-for="heroSection in pages.nodes" :key="heroSection.id" :content="heroSection" />
   </div>
 </template>

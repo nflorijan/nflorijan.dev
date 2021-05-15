@@ -1,10 +1,35 @@
 <template>
   <div>
-    <h1>This is about page</h1>
+    <HeroSection v-for="heroSection in pages.nodes" :key="heroSection.id" :content="heroSection" />
   </div>
 </template>
 <script>
-export default {
+import gqlQuery from 'graphql-tag'
 
+export default {
+  data () {
+    return {
+      pages: ''
+    }
+  },
+  apollo: {
+    pages: gqlQuery`query {
+    pages(where: {title: "About"}) {
+    nodes {
+      id
+      title
+      heroSection {
+        heroSectionTitle
+         hetoSectionText
+          heroSectionImage {
+            altText
+            title
+            sourceUrl
+          }
+      }
+    }
+  }
+  }`
+  }
 }
 </script>

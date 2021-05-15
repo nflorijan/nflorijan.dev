@@ -1,11 +1,6 @@
 <template>
   <div>
-    <h1>This is blog page</h1>
-    <div
-      v-if="$apollo.loading"
-    >
-      Loading posts...
-    </div>
+    <HeroSection v-for="heroSection in pages.nodes" :key="heroSection.id" :content="heroSection" />
     <BlogExcerpt
       v-for="post in posts.nodes"
       :key="post.id"
@@ -19,7 +14,8 @@ import gqlQuery from 'graphql-tag'
 export default {
   data () {
     return {
-      posts: ''
+      posts: '',
+      pages: ''
     }
   },
   apollo: {
@@ -33,7 +29,24 @@ export default {
         }
       }
     }
-    `
+    `,
+    pages: gqlQuery`query {
+    pages(where: {title: "Blog"}) {
+    nodes {
+      id
+      title
+      heroSection {
+        heroSectionTitle
+         hetoSectionText
+          heroSectionImage {
+            altText
+            title
+            sourceUrl
+          }
+      }
+    }
+  }
+  }`
   }
 }
 </script>

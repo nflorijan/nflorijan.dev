@@ -17,7 +17,7 @@
             <nuxt-link
               to="/about"
             >
-              About
+              About me
             </nuxt-link>
           </li>
           <li>

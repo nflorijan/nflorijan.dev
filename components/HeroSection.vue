@@ -2,17 +2,17 @@
   <section class="c-hero-section">
     <div class="c-hero-section__conent">
       <h1 class="c-hero-section__title">
-        {{ content.heroSection.heroSectionTitle }}
+        {{ heroSectionTitle }}
       </h1>
       <p class="c-hero-section__text">
-        {{ content.heroSection.hetoSectionText }}
+        {{ heroSectionText }}
       </p>
     </div>
     <img
       class="c-hero-section__image"
-      :title="content.heroSection.heroSectionImage.title"
-      :src="content.heroSection.heroSectionImage.sourceUrl"
-      :alt="content.heroSection.heroSectionImage.altText"
+      :title="heroSectionImgTitle"
+      :src="heroSectionImgUrl"
+      :alt="heroSectionImgAlt"
     >
   </section>
 </template>
@@ -23,6 +23,22 @@ export default {
       type: Object,
       required: true
     }
+  },
+  data () {
+    return {
+      heroSectionTitle: '',
+      heroSectionText: '',
+      heroSectionImgTitle: '',
+      heroSectionImgUrl: '',
+      heroSectionImgAlt: ''
+    }
+  },
+  mounted () {
+    this.heroSectionTitle = this.content.heroSection.heroSectionTitle
+    this.heroSectionText = this.content.heroSection.hetoSectionText
+    this.heroSectionImgTitle = this.content.heroSection.heroSectionImage.title
+    this.heroSectionImgUrl = this.content.heroSection.heroSectionImage.sourceUrl
+    this.heroSectionImgAlt = this.content.heroSection.heroSectionImage.altText
   }
 }
 </script>
@@ -35,7 +51,7 @@ export default {
     width: 100%;
     height: 664px;
     overflow: hidden;
-    z-index: 1;
+    z-index: 1.1;
 
     &::after {
       content: '';
