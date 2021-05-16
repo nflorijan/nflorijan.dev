@@ -13,6 +13,7 @@
   "dependencies": {
     "@nuxtjs/apollo": "^4.0.1-rc.5",
     "core-js": "^3.9.1",
+    "date-fns": "^2.21.3",
     "graphql-tag": "^2.12.4",
     "nuxt": "^2.15.3",
     "nuxt-sass-resources-loader": "^2.0.5",

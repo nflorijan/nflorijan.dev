@@ -49,7 +49,7 @@ export default {
   .c-hero-section {
     position: relative;
     width: 100%;
-    height: 664px;
+    height: 630px;
     overflow: hidden;
     z-index: 1.1;
 
