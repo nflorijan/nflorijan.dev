@@ -91,6 +91,7 @@ export default {
     width: 100%;
     z-index: 10;
     padding: 60px 0;
+    transition: $nf-transition;
   }
 
   .site-header__wrap {
@@ -146,6 +147,7 @@ export default {
 
   // Header styles on scroll
   .site-header-alt {
-    background-color: $nf-color-red-01;
+    background-color: rgba($nf-color-black-01, 0.8);
+    padding: 20px 0;
   }
 </style>
