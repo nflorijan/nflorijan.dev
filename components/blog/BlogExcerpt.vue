@@ -31,7 +31,8 @@ export default {
       postExcerptSlug: '',
       postExcerptDate: '',
       postExcerptImg: '',
-      postExcerptImgAltText: ''
+      postExcerptImgAltText: '',
+      postExcerptImgTitle: ''
     }
   },
   mounted () {

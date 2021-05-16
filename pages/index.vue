@@ -10,7 +10,7 @@ import gqlQuery from 'graphql-tag'
 export default {
   data () {
     return {
-      pages: ''
+      pages: []
     }
   },
   apollo: {

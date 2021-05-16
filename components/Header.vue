@@ -70,13 +70,13 @@ export default {
   mounted () {
     window.addEventListener('scroll', this.updateScroll)
   },
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.updateScroll)
+  },
   methods: {
     updateScroll () {
       this.scrollPosition = window.scrollY
     }
-  },
-  destroy () {
-    window.removeEventListener('scroll', this.updateScroll)
   }
 }
 </script>
