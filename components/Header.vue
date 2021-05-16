@@ -1,5 +1,5 @@
 <template>
-  <header class="site-header">
+  <header :class="{'site-header-alt': scrollPosition > 5}" class="site-header">
     <div class="site-header__wrap">
       <nuxt-link class="site-header__logo" to="/">
         {{ generalSettings.title }}
@@ -55,7 +55,8 @@ import gqlQuery from 'graphql-tag'
 export default {
   data () {
     return {
-      generalSettings: ''
+      generalSettings: '',
+      scrollPosition: null
     }
   },
   apollo: {
@@ -65,6 +66,17 @@ export default {
       }
     }
     `
+  },
+  mounted () {
+    window.addEventListener('scroll', this.updateScroll)
+  },
+  methods: {
+    updateScroll () {
+      this.scrollPosition = window.scrollY
+    }
+  },
+  destroy () {
+    window.removeEventListener('scroll', this.updateScroll)
   }
 }
 </script>
@@ -130,5 +142,10 @@ export default {
     li {
       margin-left: 5px;
     }
+  }
+
+  // Header styles on scroll
+  .site-header-alt {
+    background-color: $nf-color-red-01;
   }
 </style>
